@@ -1,0 +1,507 @@
+.nav-main{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* height: 100px; */
+    backdrop-filter: blur(20px);
+    padding: 10px 10%;
+    box-shadow: 4px 5px 6px white; 
+}
+.nav{
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.nav-front h2{
+    letter-spacing: 10px;
+}
+
+.sar{
+    color: black;
+    text-shadow: 2px 2px 2px aliceblue;
+}
+
+.dar{
+    color: red;
+}
+
+
+.nav-main nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-main nav ul li a{
+    font-size: 16px;
+    font-family: 'Roboto Flex', sans-serif;
+    color: dark;
+    cursor: pointer;
+}
+
+
+
+/* Small Screen nav starts */
+.smal-screen-nav nav ul {
+    display: flex;
+    flex-direction: column;
+}
+.big-screen-nav  ul li a{
+    color: white;
+}
+
+.smal-screen-nav{
+    position: fixed;
+background: red;
+right: 0;
+width: 297px;
+z-index: 30;
+background: rgba(0,0,0,.4);
+backdrop-filter: blur(5px);
+top: 0;
+height: 100vh;
+bottom: 0;
+transform: translateX(350px);
+transition: 1s ease-in-out ;
+display: none;
+}
+
+.small-screen-nav-active{
+   transform: translateX(0px);
+}
+
+.smal-screen-nav nav ul li a{
+    color: white;
+    font-size: 23px;
+}
+
+.smal-screen-nav nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.smal-screen-nav nav {
+    padding: 0px 30px;
+    margin-top: 150px;
+}
+
+.small-screen-close{
+    font-size: 41px;
+   position: absolute;
+  right: 37px;
+  top: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+.ham{
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:850px) {
+   
+    .big-screen-nav{
+        display: none;
+    }
+    .ham{
+        display: block;
+    }
+    .smal-screen-nav {
+        display: block;
+    }
+}
+
+
+/* The Front Part */
+
+
+
+.man{
+    height: 100px;
+}
+
+.front-main{
+    background: url("../assets/bgIMG.png") ;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.front-content{
+    position: relative;
+}
+
+.man{
+    height: 60%;
+bottom: 0px;
+transform: translateX(-50%);
+margin-left: 50%;
+visibility: hidden;
+}
+
+.intro{
+    background: white;
+    padding: 8px;
+    position: absolute;
+    top: 50px;
+    left: 76px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px aliceblue;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 11px 19px;
+}
+
+.intro p{
+    letter-spacing: 3px;
+}
+
+.skill{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    background: white;
+    padding: 5px;
+    width: 169px;
+    border-radius: 7px;
+    padding: 4px 12px;
+}
+.skill .span{
+    margin-left: 25px;
+   margin-top: 15px;
+}
+
+.front-logos{
+    height: 48px;
+}
+
+.logos{
+    height: 65px;
+    width: 65px;
+    background: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.css{
+    position: absolute;
+top: 7%;
+right: 26%;
+}
+
+.html{
+    position: absolute;
+top: 24%;
+left: 12px;
+
+}
+
+
+.figma{
+    position: absolute;
+top: 50%;
+left: 20%;
+}
+
+.react{
+    position: absolute;
+top: 31%;
+right: 15%;
+height: 100px;
+width: 100px;
+box-shadow: 2px 2px 2px aliceblue;
+}
+
+.js{
+    position: absolute;
+    top: 62%;
+    right: 23%;
+}
+
+@media screen and (max-width:800px) {
+    .man{
+        visibility: hidden;
+    }
+    .css{
+        right: 20px;
+        top: 10px;
+    }
+}
+
+
+/* Intro Page */
+.blue{
+    color: rgb(137, 137, 219);
+}
+
+.intro-content img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card{
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+@media screen and (max-width:1100px) {
+    .intro-content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .intro-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Portfolio */
+.portfolio{
+    color: brown;
+}
+
+.btn{
+    background-color: white;
+    color: black;
+    font-family: 'Roboto Condensed', Sans-Serif;
+    height: 40px;
+}
+
+.active-btn{
+    background-color: rgb(80, 80, 228);
+    color: white;
+}
+
+/* Projects Card */
+.single-project img{
+   width: 100%;
+   border-radius: 20px;
+}
+.single-project{
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.card-front{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.card-front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.card-overlay{
+    position: absolute;
+top: 0px;
+left: 0px;
+background-color: rgba(0, 0, 0, .4);
+z-index: 10;
+height: 100%;
+width: 100%;
+border-radius: 10px;
+display: none;
+}
+
+.card-icon-main{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+align-items: center;
+display: flex;
+gap: 21px;
+/* display: none; */
+visibility: hidden;
+}
+
+.project-boxes-main{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+
+.card-icon{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.githup,.eye{
+    color: white;
+    font-size: 20px;
+}
+.card-front{
+    cursor: pointer;
+}
+
+
+.card-front:hover .card-overlay{
+    display: block;
+}
+
+.card-front:hover .card-icon-main{
+    visibility: visible;
+}
+
+
+.single-project{
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.single-project:hover{
+    scale: 1.1;
+}
+
+@media screen and (max-width:700px) {
+    .project-boxes-main{
+        width: 80%;
+    }
+}
+
+
+/* Skills */
+
+.skills-main img{
+    width: 60px;
+}
+
+.skills-content h3 span{
+  color: red;
+  text-shadow: 2px 2px 2px aliceblue;
+  text-shadow: 3px 2px 2px #996868;
+}
+
+.skills-content p{
+    letter-spacing: 3px;
+}
+
+@media screen and (max-width:1000px){
+    .skills-main{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .skills-main{
+        width:90%
+    }
+}
+
+.contact-details{
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-details img{
+    width: 100%;
+    height: 100%;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #db9797;
+padding: 16px;
+box-shadow: 2px 2px 2px #bd8989;
+}
+
+.email,.phone p{
+    color: white;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #8787b5;
+padding: 20px;
+}
+
+.email img{
+    width: 40px;
+    height: 40px;
+}
+
+
+.phone img{
+    width: 40px;
+    height: 40px;
+}
+
+.contact-details,.chat{
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.chat{
+    margin-left: 55%;
+}
+
+@media screen and (max-width:900px) {
+    .contact-details{
+        flex-direction: column;
+        width: 70%;
+    }.chat{
+        margin-left: 50%;
+        width: 70%;
+        margin-left: 50%;
+    }
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text-area{
+    height: 200px;
+}
+
+.contact-info input{
+    height: 60px;
+}
+
+.chatword{
+    color: pink;
+    text-shadow: 2px 2px 2px black;
+}
+
+.submit{
+    margin-left: 50%;
+transform: translateX(-50%);
+background: #7171cc;
+width: 106px;
+height: 56px;
+color: white;
+}
